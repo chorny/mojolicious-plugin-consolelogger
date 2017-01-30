@@ -43,14 +43,14 @@ $t->get_ok($_)->status_is(200)->element_exists('script')
   qr/console\.group\("error"\);\s*console\.log\("error"\);\s*console\.groupEnd\("error"\);/
   )
   ->content_like(
-    qr/console\.group\("fatal"\);\s*console\.log\({"json":"structure"}\);\s*console\.groupEnd\("fatal"\);/
+    qr/console\.group\("fatal"\);\s*console\.log\(\{"json":"structure"}\);\s*console\.groupEnd\("fatal"\);/
   )
   ->content_like(
   qr/console\.group\("session"\)/
   )
   ->content_like(qr/"session":"value"/)
   ->content_like(
-  qr/console\.group\("config"\);\s*console\.log\({"config":"value"}\);\s*console\.groupEnd\("config"\);/
+  qr/console\.group\("config"\);\s*console\.log\(\{"config":"value"}\);\s*console\.groupEnd\("config"\);/
   ) 
   ->content_like(
   qr/console\.group\("stash"\)/
